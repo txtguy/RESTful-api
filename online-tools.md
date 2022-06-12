@@ -109,10 +109,17 @@
 
 ----
 
-- jq // WIP
+- jq
 
 ```
 [ .[] | {sha:.sha, date: .commit.author.date, verified:.commit.verification.verified} ]
 ```
 
 https://stackoverflow.com/questions/26701538/how-to-filter-an-array-of-objects-based-on-values-in-an-inner-array-with-jq
+- `select()`: https://github.com/stedolan/jq/wiki/Cookbook#filter-objects-based-on-the-contents-of-a-key
+
+```
+[ .[] | select(.commit.verification.verified) | {sha:.sha, date: .commit.author.date} ]
+```
+
+```
