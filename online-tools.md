@@ -6,9 +6,13 @@
 
 ----
 
-## Examples...
- 
-*"GitHub API - List commits"*: https://docs.github.com/en/rest/commits/commits#list-commits
+## GitHub API
+
+- https://stackoverflow.com/questions/51584979/get-verification-object-of-release-via-github-api
+
+- *"GitHub API - List commits"*: https://docs.github.com/en/rest/commits/commits#list-commits
+
+### Example
 
 - URL: https://api.github.com/repos/ytdl-org/youtube-dl/commits
 - Method: `GET`
