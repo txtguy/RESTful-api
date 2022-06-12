@@ -106,3 +106,11 @@
 
 ]
 ```
+
+----
+
+- jq // WIP
+
+```
+[ .[] | {sha:.sha, date: .commit.author.date, verified:.commit.verification.verified} ]
+```
