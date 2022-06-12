@@ -113,6 +113,8 @@
 
 ```
 [ .[] | {sha:.sha, date: .commit.author.date, verified:.commit.verification.verified} ]
+
+map( {sha:.sha, date: .commit.author.date, verified:.commit.verification.verified} )
 ```
 
 https://stackoverflow.com/questions/26701538/how-to-filter-an-array-of-objects-based-on-values-in-an-inner-array-with-jq
@@ -120,6 +122,8 @@ https://stackoverflow.com/questions/26701538/how-to-filter-an-array-of-objects-b
 
 ```
 [ .[] | select(.commit.verification.verified) | {sha:.sha, date: .commit.author.date} ]
+
+map( select(.commit.verification.verified) | {sha:.sha, date: .commit.author.date} )
 ```
 
 ```
