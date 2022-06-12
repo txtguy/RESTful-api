@@ -121,8 +121,6 @@ https://stackoverflow.com/questions/26701538/how-to-filter-an-array-of-objects-b
 - `select()`: https://github.com/stedolan/jq/wiki/Cookbook#filter-objects-based-on-the-contents-of-a-key
 
 ```
-[ .[] | select(.commit.verification.verified) | {sha:.sha, date: .commit.author.date} ]
-
 map( select(.commit.verification.verified) | {sha:.sha, date: .commit.author.date} )
 ```
 
