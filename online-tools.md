@@ -129,3 +129,9 @@ map( select(.commit.verification.verified) | {sha:.sha, date: .commit.author.dat
 ```
 sort_by(.commit.author.date) | map( select(.commit.verification.verified) | {sha:.sha, date: .commit.author.date} )
 ```
+
+- `@tsv`: https://stackoverflow.com/questions/49200066/jq-select-and-sort-by
+
+```
+sort_by(.commit.author.date) | map( select(.commit.verification.verified) | [.sha, .commit.author.date] | @tsv )
+```
