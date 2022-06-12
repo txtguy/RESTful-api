@@ -126,4 +126,8 @@ https://stackoverflow.com/questions/26701538/how-to-filter-an-array-of-objects-b
 map( select(.commit.verification.verified) | {sha:.sha, date: .commit.author.date} )
 ```
 
+- `sort_by()`: https://stackoverflow.com/questions/49200066/jq-select-and-sort-by
+
+```
+sort_by(.commit.author.date) | map( select(.commit.verification.verified) | {sha:.sha, date: .commit.author.date} )
 ```
